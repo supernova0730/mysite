@@ -4,14 +4,9 @@ from django.views.generic import ListView
 from django.core.mail import send_mail
 from django.db.models import Count
 from taggit.models import Tag
-from django.contrib.postgres.search import SearchVector
-from django.contrib.postgres.search import SearchQuery
-from django.contrib.postgres.search import SearchRank
-from .models import Post
-from .models import Comment
-from .forms import EmailPostForm
-from .forms import CommentForm
-from .forms import SearchForm
+from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
+from .models import Post, Comment
+from .forms import EmailPostForm, CommentForm, SearchForm
 
 
 class PostListView(ListView):
